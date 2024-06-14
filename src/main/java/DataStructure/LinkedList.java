@@ -97,6 +97,19 @@ public class LinkedList {
         return temp;
     }
 
+    //Metodo prepend
+    public void prepend(String data) {
+        Node newNode = new Node(data);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
+    }
+
 
 
 
@@ -105,8 +118,9 @@ public class LinkedList {
         LinkedList list = new LinkedList("elemento 1");
         list.append("elemento 2");
         list.append("elemento 3");
+        list.prepend("Elemento 0");
 
-      System.out.println(list.removeLast().data);
+  //    System.out.println(list.removeLast().data);
       list.print();
 
      /*   list.getHead();
