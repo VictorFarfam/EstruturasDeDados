@@ -59,6 +59,26 @@ public class Tree {
         preOrder(node.right);
     }
 
+    //Em ordem
+    public void inOrder(){
+        inOrder(root);
+    }
+
+    private void inOrder(final Node node) {
+        if(node == null) return;
+        inOrder(node.left);
+        System.out.println(node.value);
+        inOrder(node.right);
+    }
+
+
+
+
+
+
+
+
+
 
     public static void main(String[] args) {
 
@@ -73,7 +93,7 @@ public class Tree {
 
 
         System.out.println("#####################");
-        tree.preOrder();
+        tree.inOrder();
         System.out.println("#####################");
 
 
