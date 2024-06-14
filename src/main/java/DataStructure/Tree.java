@@ -83,7 +83,7 @@ public class Tree {
         System.out.println(node.value);
     }
 
-    //Metodo busca em profundidade
+    //Metodo busca em largura
     public void BFS() {
         if(root == null) return;
         Queue<Node> queue = new LinkedList<>();
