@@ -123,6 +123,15 @@ public class LinkedList {
         }
         return temp;
     }
+    //Metodo get
+    public Node get(int index){
+        if (index < 0 || index >= length) return null;
+        Node temp = head;
+        for(int i = 0; i < index; i++){
+            temp = temp.next;
+        }
+        return temp;
+    }
 
 
 
@@ -135,8 +144,10 @@ public class LinkedList {
         list.append("elemento 3");
         list.prepend("Elemento 0");
 
-      System.out.println(list.removeFirst().data);
-      list.print();
+      System.out.println(list.get(2).data);
+
+     // System.out.println(list.removeFirst().data);
+     // list.print();
 
      /*   list.getHead();
         list.getTail();
