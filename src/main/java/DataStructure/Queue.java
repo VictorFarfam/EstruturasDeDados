@@ -58,18 +58,65 @@ public class Queue {
         System.out.println("##############################");
     }
 
+    //Metodo enqueue
+    public void enqueue(int value) {
+        Node newNode = new Node(value);
+
+        if (length == 0){
+            first = newNode;
+            last = newNode;
+        } else {
+            last.next = newNode;
+            last = newNode;
+
+        }
+        length++;
+    }
+
+    //Metodo dequeue
+    public Node dequeue(){
+        if (length == 0) return null;
+        Node temp = first;
+        if (length == 1){
+            first = null;
+            last = null;
+        } else {
+            first = first.next;
+            temp.next = null;
+        }
+        length--;
+        return temp;
+    }
+
+
+
+
+
+
+
+
 
     public static void main(String[] args) {
         Queue myQueue = new Queue(1);
+        myQueue.enqueue(2);
+        myQueue.enqueue(3);
 
-        myQueue.getFirst();
-        myQueue.getLast();
-        myQueue.getLength();
+        System.out.println(myQueue.dequeue().value);
+        System.out.println(myQueue.dequeue().value);
+        System.out.println(myQueue.dequeue().value);
+
+    //    myQueue.getFirst();
+    //    myQueue.getLast();
+    //    myQueue.getLength();
+
+    //    myQueue.print();
 
 
-        myQueue.print();
+    //    myQueue.getFirst();
+    //    myQueue.getLast();
+    //    myQueue.getLength();
 
-
+    //    myQueue.print();
 
 
     }
