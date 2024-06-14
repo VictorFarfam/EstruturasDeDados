@@ -133,6 +133,16 @@ public class LinkedList {
         return temp;
     }
 
+    //Metodo set
+    public boolean set(int index, String data) {
+        Node temp = get(index);
+        if (temp != null){
+            temp.data = data;
+            return true;
+        }
+        return false;
+    }
+
     //Metodo inserir especifica
     public boolean insert(int index, String data){
         if (index < 0 || index > length) return false;
@@ -157,7 +167,6 @@ public class LinkedList {
 
 
 
-
   public static void main(String[] args) {
         LinkedList list = new LinkedList("elemento 1");
         list.append("elemento 2");
@@ -169,6 +178,9 @@ public class LinkedList {
    //   System.out.println(list.get(2).data);
 
      // System.out.println(list.removeFirst().data);
+      list.print();
+
+      list.set(1, "elemento 0.5");
       list.print();
 
      /*   list.getHead();
