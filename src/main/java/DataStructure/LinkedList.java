@@ -51,11 +51,25 @@ public class LinkedList {
         length = 0;
     }
 
+    //Metodo de Print
+    public void print(){
+        Node temp = this.head;
+        while (temp != null) {
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+    }
+
+
+
+
+
 
   public static void main(String[] args) {
         LinkedList list = new LinkedList("elemento 1");
         list.getHead();
         list.getTail();
         list.getTail();
+        list.print();
     }
 }
