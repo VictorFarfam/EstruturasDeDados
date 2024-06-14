@@ -58,21 +58,44 @@ public class Stack {
         height++;
     }
 
+    //Metodo pop
+    public Node pop(){
+        if (height == 0) return null;
+
+        Node temp = top;
+        top = top.next;
+        temp.next = null;
+        height--;
+
+        return temp;
+    }
+
+
+
+
+
+
+
 
     public static void main(String[] args) {
 
         Stack myStack = new Stack(2);
-
-        myStack.getTop();
-        myStack.getHeight();
-
-        myStack.print();
-
         myStack.push(1);
 
-        myStack.print();
-        myStack.getHeight();
-        myStack.getTop();
+
+        System.out.println(myStack.pop().value);
+        System.out.println(myStack.pop().value);
+        System.out.println(myStack.pop() == null);
+
+    //    myStack.getTop();
+    //    myStack.getHeight();
+
+    //    myStack.print();
+
+
+    //    myStack.print();
+    //    myStack.getHeight();
+    //    myStack.getTop();
     }
 
 
