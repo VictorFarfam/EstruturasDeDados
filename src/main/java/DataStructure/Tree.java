@@ -71,7 +71,31 @@ public class Tree {
         inOrder(node.right);
     }
 
+    //pos ordem
+    public void posOrder(){
+        posOrder(root);
+    }
 
+    private void posOrder(final Node node) {
+        if(node == null) return;
+        posOrder(node.left);
+        posOrder(node.right);
+        System.out.println(node.value);
+    }
+
+    //Metodo busca em profundidade
+    public void BFS() {
+        if(root == null) return;
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            Node node = queue.remove();
+            if (node.left != null) queue.add(node.left);
+            if (node.right != null) queue.add(node.right);
+
+            System.out.println(node.value);
+        }
+    }
 
 
 
@@ -93,7 +117,7 @@ public class Tree {
 
 
         System.out.println("#####################");
-        tree.inOrder();
+        tree.BFS();
         System.out.println("#####################");
 
 
