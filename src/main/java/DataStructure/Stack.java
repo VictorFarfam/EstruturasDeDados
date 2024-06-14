@@ -6,7 +6,7 @@ public class Stack {
     private int height;
 
 
-    class Node{
+    public class Node{
         int value;
         Node next;
 
@@ -14,7 +14,12 @@ public class Stack {
         Node (int value) {
             this.value = value;
         }
+
+        public int getValue() {
+            return value;
+        }
     }
+
 
     public Stack(int value){
         Node newNode = new Node(value);
