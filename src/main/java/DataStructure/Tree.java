@@ -97,13 +97,6 @@ public class Tree {
         }
     }
 
-
-
-
-
-
-
-
     public static void main(String[] args) {
 
         Tree tree = new Tree();
@@ -119,20 +112,6 @@ public class Tree {
         System.out.println("#####################");
         tree.BFS();
         System.out.println("#####################");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         /*Tree tree = new Tree();
