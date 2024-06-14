@@ -7,9 +7,6 @@ public class Queue {
     private int length;
 
 
-
-
-
     public class Node {
         int value;
         Node next;
@@ -18,6 +15,9 @@ public class Queue {
             this.value = value;
         }
 
+        public int getValue() {
+            return this.value;
+        }
 
     }
 
