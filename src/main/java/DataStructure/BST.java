@@ -45,6 +45,31 @@ public class BST {
         inOrder(node.right);
     }
 
+    //Metodo de busca
+    public boolean contains(int value){
+       return contains(root, value);
+    }
+
+    private boolean contains(final Node root, final int value) {
+        if (root == null) return false;
+        if (root.value == value) return true;
+        if (value > root.value) return contains(root.right, value);
+        else return contains(root.left, value);
+    }
+    //
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static void main(String[] args) {
         BST tree = new BST();
         tree.insert(37);
@@ -55,7 +80,14 @@ public class BST {
         tree.insert(42);
         tree.insert(72);
 
-        tree.inOrder();
+
+        System.out.println(tree.contains(11));
+        System.out.println(tree.contains(99));
+
+
+
+
+    //    tree.inOrder();
     }
 
 
